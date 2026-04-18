@@ -19,3 +19,4 @@ public class Part1 {
 		}
 	}
 }
+// 4 9 5 10 8 12 

@@ -1,7 +1,7 @@
 package exam.codewriting.q5;
 
-public class Laptop {
-
+public class Laptop extends Computer{
+    private boolean isOpen;
 	/*
 	 * We wish to create a Laptop class. A Laptop is a Computer, and should inherit from the Computer class from the previous problem. The main difference between a Laptop and a Computer is that laptops have the ability to open and close. This can affect the state of the computer (whether it is asleep or not) as well as whether the button is able to be pressed. Your Laptop class should include an instance variable to track whether the laptop is currently open or not.
 
@@ -14,17 +14,28 @@ public class Laptop {
 	
     // %Write the constructor for the \texttt{Laptop} class.
 	// %When a \texttt{Laptop} is first created, it should be closed.
-
+public Laptop(boolean isAsleep){
+	super(isAsleep);
+	this.isOpen = false;
+}
 	
 	
 	
 	// Should put the laptop to sleep, if it is on
 	public void close() {
+		isOpen = false;
+		if(this.isOn()){
+			setAsleep(true);
+		}
 	
 	}
 	
 	// Should wake the laptop up, if it is on
 	public void open() {
+		isOpen = true;
+		if(this.isOn()){
+			setAsleep(true);
+		}
 		
 	}
 	
@@ -34,6 +45,9 @@ public class Laptop {
 	* from the base class. 
 	*/
 	public void pushPowerButton(boolean longPress) {
+		if(isOpen){
+			super.pushPowerButton(longPress);
+		}
 	
 	}
 }

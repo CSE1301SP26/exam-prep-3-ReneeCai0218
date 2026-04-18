@@ -20,3 +20,5 @@ public class Part1 {
 		}
 	}
 }
+// a b c d e f
+// d e a b d 

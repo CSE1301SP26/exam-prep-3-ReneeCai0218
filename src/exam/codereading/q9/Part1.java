@@ -14,7 +14,7 @@ public class Part1 {
 		words.add("instance");
 		words.add("list");
 
-		int base = 10;
+		int base = 10; // 8
 
 		for(int i = 0; i < 5; i++) {
 		    String word = words.get(i);
@@ -24,3 +24,4 @@ public class Part1 {
 		}
 	}
 }
+// 2 0 1 0 2
